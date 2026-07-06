@@ -4,6 +4,15 @@
 
 A lightweight macOS utility that sends you local notifications at scheduled times to remind you to shut down your laptop and get some rest ✨
 
+<!-- Theme-aware screenshots (dark/light) -->
+<p align="center">
+	<picture>
+		<source srcset="assets/scr_dark.png" media="(prefers-color-scheme: dark)">
+		<source srcset="assets/scr_light.png" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)">
+		<img alt="nosleep screenshot" src="assets/scr_light.png" width="512" />
+	</picture>
+</p>
+
 ### A story
 
 Not sure who'd use this, so here's the origin:
