@@ -20,6 +20,11 @@ let package = Package(
                 .linkedFramework("AppKit"),
                 .linkedFramework("SwiftUI"),
             ]
+        ),
+        .testTarget(
+            name: "nosleepTests",
+            dependencies: ["nosleep"]
+            //path: "Tests"
         )
     ]
 )
