@@ -10,6 +10,9 @@ let package = Package(
         // The product is an executable, which will become your .app bundle
         .executable(name: "nosleep", targets: ["nosleep"]),
     ],
+    dependencies: [
+        .package(url: "https://github.com/swiftlang/swift-testing.git", from: "6.3.2")
+    ],
     targets: [
         .executableTarget(
             name: "nosleep",
@@ -23,8 +26,10 @@ let package = Package(
         ),
         .testTarget(
             name: "nosleepTests",
-            dependencies: ["nosleep"]
-            //path: "Tests"
+            dependencies: [
+                "nosleep",
+                .product(name: "Testing", package: "swift-testing")
+            ]
         )
     ]
 )
