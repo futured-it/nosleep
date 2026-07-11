@@ -20,7 +20,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let window = NSWindow(contentViewController: hostingController)
         window.title = "nosleep"
         window.setContentSize(NSSize(width: 400, height: 500))
-        window.styleMask = [.titled, .closable, .miniaturizable]
+        window.styleMask = [.titled, .closable, .miniaturizable, .fullSizeContentView]
+
+        // Give it the modern, unified macOS title bar look
+        window.titlebarAppearsTransparent = true
+        window.toolbarStyle = .unified
+        
         window.delegate = self
         window.makeKeyAndOrderFront(nil)
 
@@ -83,9 +88,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         if shouldTerminate {
             return .terminateNow
         } else {
-            if let window = settingsWindow, window.isVisible {
-                window.orderOut(nil)
-            }
+            NSApp.hide(nil)
             return .terminateCancel
         }
     }
