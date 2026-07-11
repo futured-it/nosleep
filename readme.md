@@ -60,21 +60,24 @@ So advantages of this approach are:
 
 **Building an app:**
 
-(You may need to Control‑click the app and select **Open** the first time, if you haven't disabled Gatekeeper - macOS’s usual dance for unsigned apps.)
+(You may need to Control‑click the app and choose **Open** the first time, if you haven't disabled Gatekeeper. That's a common procedure for unsigned apps.)
 
 ```bash
 git clone https://github.com/futured-it/nosleep.git
-# (if GitHub is gonna work any time soon, jkjk)
 cd nosleep
-sh ./build.sh
 
+# to build
+sh ./build.sh
 # to open: (or as described above)
 open nosleep.app
+
+# to test
+swift test
 ```
 
 ### Proposals or ideas
 
 I'm still unsure about when these features are gonna be implemented though:
-- Custom notification sounds (e.g. explosions, GPWS sounds, which you can add by wav file)
+- Custom notification sounds (e.g., explosions, GPWS sounds, which you can add by wav file)
 - Snooze functionality (so that you can disable it for a day or two if needed)
 - Android app lmao (I can continue with Instagram reels on my phone)
