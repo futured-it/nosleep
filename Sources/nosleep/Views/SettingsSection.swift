@@ -6,6 +6,7 @@ struct SettingsSection: View {
     let permissionStatus: UNAuthorizationStatus
 
     var body: some View {
+        // MARK: - First notification
         Section {
             Toggle(isOn: Binding(
                 get: { settings.enableFirst },
@@ -38,6 +39,7 @@ struct SettingsSection: View {
             }
         }
 
+        // MARK: - Repeating notifications
         Section {
             VStack(spacing: 0) {
                 Toggle(isOn: Binding(
